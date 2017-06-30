@@ -1,0 +1,13 @@
+server:
+  port: 8061
+spring:
+  application:
+    name: boss-client
+
+# ===================================================================
+# Eureka注册中心配置
+# ===================================================================
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka/
