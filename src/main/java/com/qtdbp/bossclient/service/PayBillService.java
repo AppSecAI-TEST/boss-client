@@ -15,5 +15,5 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface PayBillService {
 
     @RequestMapping(value = "/payBill", method = RequestMethod.POST)
-    ModelMap insertPayBill(@RequestBody PayBillModel payBillModel) ;
+    Integer insertPayBill(@RequestBody PayBillModel payBillModel) ;
 }
