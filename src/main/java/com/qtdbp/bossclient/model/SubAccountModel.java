@@ -9,7 +9,7 @@ import java.util.Date;
 public class SubAccountModel {
 
     private String id;
-    private int userId;                     //用户编号
+    private String ssoUserId;                     //用户编号
     private String accountType;            //子账户号类型
     private String userName;               //用户名
     private Double amount;                  //总金额
@@ -34,12 +34,12 @@ public class SubAccountModel {
         this.id = id;
     }
 
-    public int getUserId() {
-        return userId;
+    public String getSsoUserId() {
+        return ssoUserId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setSsoUserId(String ssoUserId) {
+        this.ssoUserId = ssoUserId;
     }
 
     public String getAccountType() {

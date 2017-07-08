@@ -1,5 +1,6 @@
 package com.qtdbp.bossclient.model;
 
+import java.beans.Transient;
 import java.util.Date;
 
 /**
@@ -9,9 +10,9 @@ import java.util.Date;
 public class RechargeBillModel {
 
     private String sn;                      //交易流水
-    private Integer userId;                //用户编号
+    private String ssoUserId;                //用户编号
     private String userName;               //用户名
-    private Integer accountType;           //子账户号类型
+    private String accountType;           //子账户号类型
     private String rechargeType;           //充值类型
     private String bankType;               //行别
     private String bankCode;               //行号
@@ -35,6 +36,8 @@ public class RechargeBillModel {
     private Date settleDate;               //结算日期
     private Date checkDate;                //渠道结算日起
 
+    private String orderNo;                 //订单号
+
     public String getSn() {
         return sn;
     }
@@ -43,12 +46,12 @@ public class RechargeBillModel {
         this.sn = sn;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public String getSsoUserId() {
+        return ssoUserId;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setSsoUserId(String ssoUserId) {
+        this.ssoUserId = ssoUserId;
     }
 
     public String getUserName() {
@@ -59,11 +62,11 @@ public class RechargeBillModel {
         this.userName = userName;
     }
 
-    public Integer getAccountType() {
+    public String getAccountType() {
         return accountType;
     }
 
-    public void setAccountType(Integer accountType) {
+    public void setAccountType(String accountType) {
         this.accountType = accountType;
     }
 
@@ -241,5 +244,13 @@ public class RechargeBillModel {
 
     public void setCheckDate(Date checkDate) {
         this.checkDate = checkDate;
+    }
+
+    public String getOrderNo() {
+        return orderNo;
+    }
+
+    public void setOrderNo(String orderNo) {
+        this.orderNo = orderNo;
     }
 }

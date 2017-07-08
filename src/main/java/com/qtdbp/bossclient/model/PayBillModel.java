@@ -8,10 +8,10 @@ import java.util.Date;
 public class PayBillModel {
 
     private String sn;                     //流水号
-    private Integer srcUserId;            //发起方客户编号
+    private String srcSsoUserId;            //发起方客户编号
     private String subAccountType;        //子账户类型
     private Integer payerPlatformCust;    //付款方是否平台客户
-    private Integer payerUserId;          //付款方客户编号
+    private String payerSsoUserId;          //付款方客户编号
     private String payerUseName;         //付款方户名
     private String payerBankType;         //付款方开户行行别
     private String payerBankCode;         //付款方开户行行号
@@ -55,7 +55,7 @@ public class PayBillModel {
     private Date bankTime ;                //银行回执更新时间
     private Date workDate ;                //会计日期
     private Double fee ;                    //手续费
-    private Integer feeUserId ;           //付手续费方
+    private String feeSsoUserId ;           //付手续费方
     private String feeState ;              //手续费状态
     private String undoState ;             //撤销状态
     private String checkState ;            //对账状态
@@ -71,12 +71,12 @@ public class PayBillModel {
         this.sn = sn;
     }
 
-    public Integer getSrcUserId() {
-        return srcUserId;
+    public String getSrcSsoUserId() {
+        return srcSsoUserId;
     }
 
-    public void setSrcUserId(Integer srcUserId) {
-        this.srcUserId = srcUserId;
+    public void setSrcSsoUserId(String srcSsoUserId) {
+        this.srcSsoUserId = srcSsoUserId;
     }
 
     public String getSubAccountType() {
@@ -95,12 +95,12 @@ public class PayBillModel {
         this.payerPlatformCust = payerPlatformCust;
     }
 
-    public Integer getPayerUserId() {
-        return payerUserId;
+    public String getPayerSsoUserId() {
+        return payerSsoUserId;
     }
 
-    public void setPayerUserId(Integer payerUserId) {
-        this.payerUserId = payerUserId;
+    public void setPayerSsoUserId(String payerSsoUserId) {
+        this.payerSsoUserId = payerSsoUserId;
     }
 
     public String getPayerUseName() {
@@ -447,12 +447,12 @@ public class PayBillModel {
         this.fee = fee;
     }
 
-    public Integer getFeeUserId() {
-        return feeUserId;
+    public String getFeeSsoUserId() {
+        return feeSsoUserId;
     }
 
-    public void setFeeUserId(Integer feeUserId) {
-        this.feeUserId = feeUserId;
+    public void setFeeSsoUserId(String feeSsoUserId) {
+        this.feeSsoUserId = feeSsoUserId;
     }
 
     public String getFeeState() {

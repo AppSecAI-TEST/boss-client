@@ -10,11 +10,11 @@ public class SubAccountSeqModel {
 
     private String sn;                      //流水号
     private String subAccountId;          //子账户ID
-    private int userId;                    //用户编号
+    private String ssoUserId;                    //用户编号
     private String userName;               //用户名
     private String accountType;            //子账户号类型
     private Integer seqFlag;               //帐务变动方向
-    private Integer changeType;            //类型
+    private String changeType;            //类型
     private Double preAmount;              //变动前总金额
     private Double amount;                  //变动后总金额
     private Double cashAmount;             //可提现发生额
@@ -42,12 +42,12 @@ public class SubAccountSeqModel {
         this.subAccountId = subAccountId;
     }
 
-    public int getUserId() {
-        return userId;
+    public String getSsoUserId() {
+        return ssoUserId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setSsoUserId(String ssoUserId) {
+        this.ssoUserId = ssoUserId;
     }
 
     public String getUserName() {
@@ -74,11 +74,11 @@ public class SubAccountSeqModel {
         this.seqFlag = seqFlag;
     }
 
-    public Integer getChangeType() {
+    public String getChangeType() {
         return changeType;
     }
 
-    public void setChangeType(Integer changeType) {
+    public void setChangeType(String changeType) {
         this.changeType = changeType;
     }
 
