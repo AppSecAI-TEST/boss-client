@@ -15,10 +15,10 @@ public class ChannelModel {
    public String id;
    //渠道类型
    public String channelType;
-   //账户类型
-   public String accountType;
-   //sso用户账号
-   public String ssoUserId;
+   //开户行卡号
+   public String bankCardNo;
+   //开户行logo
+   public String bankLogo;
    //开户行行别
    public String bankType;
    //开户行行号
@@ -29,10 +29,14 @@ public class ChannelModel {
    public String bankAddrNo;
    //开户名
    public String bankUserName;
+   //备注
+   public String bankRemark;
    //创建时间
    public Date createTime;
    //最后更新时间
    public Date lastUpdateTime;
+   // 是否可用0否，1是
+   public String isUsed;
 
    public String getId() {
       return id;
@@ -48,22 +52,6 @@ public class ChannelModel {
 
    public void setChannelType(String channelType) {
       this.channelType = channelType;
-   }
-
-   public String getAccountType() {
-      return accountType;
-   }
-
-   public void setAccountType(String accountType) {
-      this.accountType = accountType;
-   }
-
-   public String getSsoUserId() {
-      return ssoUserId;
-   }
-
-   public void setSsoUserId(String ssoUserId) {
-      this.ssoUserId = ssoUserId;
    }
 
    public String getBankType() {
@@ -120,5 +108,37 @@ public class ChannelModel {
 
    public void setLastUpdateTime(Date lastUpdateTime) {
       this.lastUpdateTime = lastUpdateTime;
+   }
+
+   public String getBankCardNo() {
+      return bankCardNo;
+   }
+
+   public void setBankCardNo(String bankCardNo) {
+      this.bankCardNo = bankCardNo;
+   }
+
+   public String getBankLogo() {
+      return bankLogo;
+   }
+
+   public void setBankLogo(String bankLogo) {
+      this.bankLogo = bankLogo;
+   }
+
+   public String getBankRemark() {
+      return bankRemark;
+   }
+
+   public void setBankRemark(String bankRemark) {
+      this.bankRemark = bankRemark;
+   }
+
+   public String getIsUsed() {
+      return isUsed;
+   }
+
+   public void setIsUsed(String isUsed) {
+      this.isUsed = isUsed;
    }
 }
