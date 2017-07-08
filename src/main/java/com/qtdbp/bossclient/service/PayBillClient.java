@@ -1,6 +1,7 @@
 package com.qtdbp.bossclient.service;
 
 
+import com.qtdbp.bossclient.base.Message;
 import com.qtdbp.bossclient.model.PayBillModel;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.ui.ModelMap;
@@ -14,10 +15,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(value = "${service.name}")
 public interface PayBillClient {
 
+    /**
+     * 添加交易支付流水
+     * @param payBillModel
+     * @return
+     */
     @RequestMapping(value = "/payBill", method = RequestMethod.POST)
-    Integer insertPayBill(@RequestBody PayBillModel payBillModel) ;
+    Message insertPayBill(@RequestBody PayBillModel payBillModel) ;
 
+    /**
+     *  更新交易支付流水
+     * @param payBillModel
+     * @return
+     */
     @RequestMapping(value = "/payBill/update", method = RequestMethod.POST)
-    Integer updatePayBill(@RequestBody PayBillModel payBillModel) ;
+    Message updatePayBill(@RequestBody PayBillModel payBillModel) ;
 
 }
