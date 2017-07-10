@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 /**
  * 提现流程
@@ -28,10 +28,10 @@ public interface WithdrawBillClient {
 
     /**
      * 分页查询提现流水
-     * @param request
+     * @param map
      * @return
      */
     @RequestMapping(value = "/api/withdraws", method = RequestMethod.GET)
-    Message findWithdrawBillsByCondtion(@RequestParam("request") HttpServletRequest request) ;
+    Message findWithdrawBillsByCondtion(@RequestParam Map<String, Object> map) ;
 
 }

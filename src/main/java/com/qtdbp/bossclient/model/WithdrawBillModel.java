@@ -37,7 +37,7 @@ public class WithdrawBillModel extends BaseModel {
    //帐务冻结变动流水
    public java.lang.String freezeSn;
    //金额
-   public double amount;
+   public Double amount;
    //提现类型
    public java.lang.String withdrawType;
    //创建时间
@@ -52,7 +52,7 @@ public class WithdrawBillModel extends BaseModel {
    public java.lang.String monitorBatchId;
    //手续费
    /** 事前收的手续费 */
-   public double fee;
+   public Double fee;
    //付手续费方
    public java.lang.String feeSsoUserId;
    //手续费状态
@@ -162,14 +162,6 @@ public class WithdrawBillModel extends BaseModel {
       this.freezeSn = freezeSn;
    }
 
-   public double getAmount() {
-      return amount;
-   }
-
-   public void setAmount(double amount) {
-      this.amount = amount;
-   }
-
    public String getWithdrawType() {
       return withdrawType;
    }
@@ -216,14 +208,6 @@ public class WithdrawBillModel extends BaseModel {
 
    public void setMonitorBatchId(String monitorBatchId) {
       this.monitorBatchId = monitorBatchId;
-   }
-
-   public double getFee() {
-      return fee;
-   }
-
-   public void setFee(double fee) {
-      this.fee = fee;
    }
 
    public String getFeeSsoUserId() {
@@ -288,5 +272,21 @@ public class WithdrawBillModel extends BaseModel {
 
    public void setCheckDate(Date checkDate) {
       this.checkDate = checkDate;
+   }
+
+   public Double getAmount() {
+      return amount;
+   }
+
+   public void setAmount(Double amount) {
+      this.amount = amount;
+   }
+
+   public Double getFee() {
+      return fee;
+   }
+
+   public void setFee(Double fee) {
+      this.fee = fee;
    }
 }
