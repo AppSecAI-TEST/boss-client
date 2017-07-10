@@ -13,7 +13,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(value = "${service.name}")
 public interface AliPayClient {
 
-
+    /**
+     * 调用支付接口
+     */
     @RequestMapping(value = "/alipayapi", method = RequestMethod.POST)
     ModelMap openAliPay(@RequestBody AlipayModel alipayModel) ;
+
+    /**
+     * 调用充值接口
+     */
+    @RequestMapping(value = "/alipayapi/recharge", method = RequestMethod.POST)
+    ModelMap openAlipayRecharge(@RequestBody AlipayModel alipayModel);
+
 }
