@@ -11,68 +11,71 @@ import java.util.Date;
 public class WithdrawBillModel extends BaseModel {
    //交易流水
    /** YYYYMMDD+交易流水 （每天1） */
-   public java.lang.String sn;
+   private java.lang.String sn;
    //用户编号
    /** 冗余 */
-   public java.lang.String ssoUserId;
+   private java.lang.String ssoUserId;
    //用户名
    /** 冗余 */
-   public java.lang.String userName;
+   private java.lang.String userName;
    //子账户号类型
    /** 冗余 */
-   public java.lang.String accountType;
+   private java.lang.String accountType;
    //行别
-   public java.lang.String bankType;
+   private java.lang.String bankType;
    //行号
    /** 支付系统行号 */
-   public java.lang.String bankCode;
+   private java.lang.String bankCode;
    //开户行行名
-   public java.lang.String bankName;
+   private java.lang.String bankName;
    //开户行地区代码
-   public java.lang.String bankAddrNo;
+   private java.lang.String bankAddrNo;
    //银行卡号
-   public java.lang.String bankCardNo;
+   private java.lang.String bankCardNo;
    //户名
-   public java.lang.String bankCardName;
+   private java.lang.String bankCardName;
    //帐务冻结变动流水
-   public java.lang.String freezeSn;
+   private java.lang.String freezeSn;
    //金额
    public Double amount;
    //提现类型
-   public java.lang.String withdrawType;
+   private java.lang.String withdrawType;
    //创建时间
-   public java.util.Date createTime;
+   private java.util.Date createTime;
    //会计日期
-   public java.util.Date workDate;
+   private java.util.Date workDate;
    //状态
-   public java.lang.String state;
+   private java.lang.String state;
    //渠道编号
-   public java.lang.String channelId;
+   private java.lang.String channelId;
    //监管批次
-   public java.lang.String monitorBatchId;
+   private java.lang.String monitorBatchId;
    //手续费
    /** 事前收的手续费 */
-   public Double fee;
+   private Double fee;
    //付手续费方
-   public java.lang.String feeSsoUserId;
+   private java.lang.String feeSsoUserId;
    //手续费状态
-   public java.lang.String feeState;
+   private java.lang.String feeState;
    //银行返回码
-   public java.lang.String bankResultCode;
+   private java.lang.String bankResultCode;
    //银行备注
-   public java.lang.String bankResultNote;
+   private java.lang.String bankResultNote;
    //支付场次
    /** 统计时回填 */
-   public java.lang.String netNo;
+   private java.lang.String netNo;
    //支付状态
    /** 登记成功时必须填写 */
-   public java.lang.String payState;
+   private java.lang.String payState;
    //结算日期
    /** 外部系统提供，供外部 系统对账用 */
-   public java.util.Date settleDate;
+   private java.util.Date settleDate;
    //渠道结算日起
    /** 与渠道对账时使用 */
-   public java.util.Date checkDate;
+   private java.util.Date checkDate;
+
+   // 短信验证码
+   private String mobileCode ;
 
    public String getSn() {
       return sn;
@@ -288,5 +291,13 @@ public class WithdrawBillModel extends BaseModel {
 
    public void setFee(Double fee) {
       this.fee = fee;
+   }
+
+   public String getMobileCode() {
+      return mobileCode;
+   }
+
+   public void setMobileCode(String mobileCode) {
+      this.mobileCode = mobileCode;
    }
 }
