@@ -22,11 +22,11 @@ public interface RechargeClient {
     Message addRechargeBill(@RequestBody RechargeBillModel model) ;
 
     /**
-     * 充值成功回调
+     * 充值成功同步回调
      * @param billModel
      * @return
      */
-    @RequestMapping(value = "/recharge/success", method = RequestMethod.POST)
-    Message rechargeSuccess(@RequestBody RechargeBillModel billModel);
+    @RequestMapping(value = "/recharge/returnUrl", method = RequestMethod.POST)
+    Message rechargeReturnUrl(@RequestBody RechargeBillModel billModel);
 
 }
