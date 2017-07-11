@@ -28,4 +28,13 @@ public class WithdrawConstants {
     /* 提现失败 */
     public static final String STATE_FAILURE = "05";
 
+    /* 未向渠道发起 */
+    public static final String PAY_STATE_NOT_APPLY = "00";
+    /* 已生成支付报表待人工查看 */
+    public static final String PAY_STATE_CREATE = "01";
+    /* 向渠道发起 */
+    public static final String PAY_STATE_APPLY = "02";
+    /* 支付完成 */
+    public static final String PAY_STATE_SUCCESS = "03";
+
 }

@@ -34,4 +34,12 @@ public interface WithdrawBillClient {
     @RequestMapping(value = "/api/withdraws", method = RequestMethod.GET)
     Message findWithdrawBillsByCondtion(@RequestParam Map<String, Object> map) ;
 
+    /**
+     * 单笔转账
+     * @param sn
+     * @return
+     */
+    @RequestMapping(value = "/api/transfer/account", method = RequestMethod.POST)
+    Message singleTransferAccounts(@RequestParam("sn") String sn) ;
+
 }
