@@ -6,7 +6,7 @@ import java.util.Date;
  * 客户子账户资金变动流水
  * Created by dell on 2017/7/4.
  */
-public class SubAccountSeqModel {
+public class SubAccountSeqModel extends BaseModel{
 
     private String sn;                      //流水号
     private String subAccountId;          //子账户ID
