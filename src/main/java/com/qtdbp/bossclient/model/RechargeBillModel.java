@@ -7,7 +7,7 @@ import java.util.Date;
  * 充值交易流水
  * Created by dell on 2017/7/4.
  */
-public class RechargeBillModel {
+public class RechargeBillModel extends BaseModel{
 
     private String sn;                      //交易流水
     private String ssoUserId;                //用户编号

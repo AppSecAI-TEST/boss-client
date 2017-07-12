@@ -6,6 +6,9 @@ import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Map;
 
 /**
  * Created by dell on 2017/7/8.
@@ -28,5 +31,14 @@ public interface RechargeClient {
      */
     @RequestMapping(value = "/recharge/returnUrl", method = RequestMethod.POST)
     Message rechargeReturnUrl(@RequestBody RechargeBillModel billModel);
+
+    /**
+     * 分页查询充值流水
+     *
+     * @param map
+     * @return
+     */
+    @RequestMapping(value = "/api/recharge", method = RequestMethod.GET)
+    public Message findRechargeBillsByCondition(@RequestParam Map<String, Object> map);
 
 }
