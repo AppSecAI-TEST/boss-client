@@ -31,7 +31,7 @@ public class PayBillModel {
     private String feeFreezeSn;           //实时手续费帐务冻结变动流水
     private String orderNo;                //订单号
     private String orderNote;              //订单说明
-    private Integer payeePlatformCust ;   //收款方是否是平台客户
+    private String payeePlatformCust ;   //收款方是否是平台客户
     private Integer payeeAccountType ;    //收款方账户类型
     private Integer payeeUserId ;         //收款方客户号
     private String payeeUserName ;        //收款方平台户名
@@ -255,11 +255,11 @@ public class PayBillModel {
         this.orderNote = orderNote;
     }
 
-    public Integer getPayeePlatformCust() {
+    public String getPayeePlatformCust() {
         return payeePlatformCust;
     }
 
-    public void setPayeePlatformCust(Integer payeePlatformCust) {
+    public void setPayeePlatformCust(String payeePlatformCust) {
         this.payeePlatformCust = payeePlatformCust;
     }
 

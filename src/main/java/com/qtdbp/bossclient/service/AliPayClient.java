@@ -25,4 +25,10 @@ public interface AliPayClient {
     @RequestMapping(value = "/alipayapi/recharge", method = RequestMethod.POST)
     ModelMap openAlipayRecharge(@RequestBody AlipayModel alipayModel);
 
+    /**
+     * 调用押付接口
+     */
+    @RequestMapping(value = "/alipayapi/pressPay", method = RequestMethod.POST)
+    ModelMap openAlipayPressPay(@RequestBody AlipayModel alipayModel);
+
 }

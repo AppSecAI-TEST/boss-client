@@ -41,4 +41,12 @@ public interface RechargeClient {
     @RequestMapping(value = "/api/recharge", method = RequestMethod.GET)
     public Message findRechargeBillsByCondition(@RequestParam Map<String, Object> map);
 
+    /**
+     * 押付成功回调
+     * @param billModel
+     * @return
+     */
+    @RequestMapping(value = "/pressPay/returnUrl", method = RequestMethod.POST)
+    Message pressPayReturn(@RequestBody RechargeBillModel billModel);
+
 }
