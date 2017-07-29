@@ -51,9 +51,9 @@ public interface RechargeClient {
 
     /**
      * 查询单条充值记录流水
-     * @param sn
+     * @param orderNo
      * @return
      */
     @RequestMapping(value = "/recharge/one", method = RequestMethod.GET)
-    Message findRechargeBySn(String sn) ;
+    Message findRechargeBySn(@RequestParam("orderNo")String orderNo) ;
 }
