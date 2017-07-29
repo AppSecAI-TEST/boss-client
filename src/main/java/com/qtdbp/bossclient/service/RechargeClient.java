@@ -49,4 +49,11 @@ public interface RechargeClient {
     @RequestMapping(value = "/pressPay/returnUrl", method = RequestMethod.POST)
     Message pressPayReturn(@RequestBody RechargeBillModel billModel);
 
+    /**
+     * 查询单条充值记录流水
+     * @param sn
+     * @return
+     */
+    @RequestMapping(value = "/recharge/one", method = RequestMethod.GET)
+    Message findRechargeBySn(String sn) ;
 }
