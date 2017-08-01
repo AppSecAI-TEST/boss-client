@@ -8,7 +8,7 @@ package com.qtdbp.bossclient.model;
 import java.util.*;
 
 /** 渠道对帐表 */
-public class ChannelCheckModel {
+public class ChannelCheckModel extends BaseModel {
    //渠道ID
    private String channelId;
    //帐务日期

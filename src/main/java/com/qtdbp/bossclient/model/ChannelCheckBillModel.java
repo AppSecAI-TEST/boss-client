@@ -8,7 +8,7 @@ package com.qtdbp.bossclient.model;
 import java.util.*;
 
 /** 渠道交易流水对照表 */
-public class ChannelCheckBillModel {
+public class ChannelCheckBillModel extends BaseModel{
    //业务流水
    /** 各种支付交易的SN */
    private String sn;
