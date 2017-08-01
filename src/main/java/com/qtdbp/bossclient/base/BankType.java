@@ -23,7 +23,7 @@ public enum BankType {
     PINGAN("3135840","平安银行"),
 
     ALIPAY("4010000", "支付宝"),
-    weichat("4020000", "微信支付");
+    WEICHAT("4020000", "微信支付");
 
     private final String code;
     private final String name;
