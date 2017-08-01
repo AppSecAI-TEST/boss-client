@@ -6,55 +6,55 @@ import java.util.*;
 public class UndoPayBillModel extends BaseModel {
    //交易流水
    /** YYYYMMDD+交易流水（每 天1） */
-   public String sn;
+   private String sn;
    //交易类型
-   public String orgTranType;
+   private String orgTranType;
    //
-   public String orgPayerSsoUserId;
+   private String orgPayerSsoUserId;
    //子账户号类型
-   public String orgSubAccountType;
+   private String orgSubAccountType;
    //原支付流水
    /** 查找原交易后后台填写 */
-   public String orgPaySn;
+   private String orgPaySn;
    //付款方开户行行别
-   public String payerBankType;
+   private String payerBankType;
    //行号
-   public String payerBankCode;
+   private String payerBankCode;
    //付款方开户行行名
-   public String payerBankName;
+   private String payerBankName;
    //付款方开户行地区代码
-   public String payerBankAddrNo;
+   private String payerBankAddrNo;
    //付款方帐号
-   public String payerBankCardNo;
+   private String payerBankCardNo;
    //付款方帐号户名
-   public String payerBankCardName;
+   private String payerBankCardName;
    //原交易金额
    /** 不能与可提现金额、不可提现金额共存 */
-   public double channelAmount;
+   private double channelAmount;
    //可提现金额
-   public double orgCashAmount;
+   private double orgCashAmount;
    //不可提现金额
-   public double orgUncashAmount;
+   private double orgUncashAmount;
    //原订单号
-   public String orgOrderNo;
+   private String orgOrderNo;
    //原对方客户号
-   public String orgPayeeUserId;
+   private String orgPayeeUserId;
    //原对方客户名
-   public String orgPayeeUserName;
+   private String orgPayeeUserName;
    //状态
-   public String state;
+   private String state;
    //创建时间
-   public Date createTime;
+   private Date createTime;
    //会计日期
-   public Date workDate;
+   private Date workDate;
    //备注
-   public String note;
+   private String note;
    //手续费
-   public double fee;
+   private double fee;
    //付手续费方
-   public String feeSsoUserId;
+   private String feeSsoUserId;
    //手续费状态
-   public String feeState;
+   private String feeState;
 
    public String getSn() {
       return sn;
