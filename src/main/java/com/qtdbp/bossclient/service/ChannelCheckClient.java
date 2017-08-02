@@ -23,7 +23,45 @@ public interface ChannelCheckClient {
      * @return
      */
     @RequestMapping(value = "/api/download/bill", method = RequestMethod.POST)
-    Message downloadChannelCheck(@RequestParam("id") String channelId, @RequestParam("date") String checkDate) ;
+    Message downloadChannelCheck(@RequestParam("id") String channelId,
+                                 @RequestParam("date") String checkDate) ;
+
+    /**
+     * 批量下载渠道对账单
+     * 目前支持支付宝
+     * @param channelId
+     * @param beginDate 开始时间，格式：2017-07-04
+     * @param endDate   结束时间，格式：2017-07-05
+     * @return
+     */
+    @RequestMapping(value = "/api/batch/download/bill", method = RequestMethod.POST)
+    Message downloadChannelCheckForDateZone(@RequestParam("id") String channelId,
+                                                   @RequestParam("begin") String beginDate,
+                                                   @RequestParam("end") String endDate) ;
+
+    /**
+     * 异步下载渠道对账单
+     * 目前支持支付宝
+     * @param channelId
+     * @param checkDate
+     * @return
+     */
+    @RequestMapping(value = "/api/download/bill/async", method = RequestMethod.POST)
+    void downloadChannelCheckAsync(@RequestParam("id") String channelId,
+                                      @RequestParam("date") String checkDate) ;
+
+    /**
+     * 异步批量下载渠道对账单
+     * 目前支持支付宝
+     * @param channelId
+     * @param beginDate 开始时间，格式：2017-07-04
+     * @param endDate   结束时间，格式：2017-07-05
+     * @return
+     */
+    @RequestMapping(value = "/api/batch/download/bill/async", method = RequestMethod.POST)
+    void downloadChannelCheckForDateZoneAsync(@RequestParam("id") String channelId,
+                                                @RequestParam("begin") String beginDate,
+                                                @RequestParam("end") String endDate) ;
 
     /**
      * 分页查询渠道对账单
