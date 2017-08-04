@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by dell on 2017/7/5.
  */
-public class PayBillModel {
+public class PayBillModel extends BaseModel{
 
     private String sn;                     //流水号
     private String srcSsoUserId;            //发起方客户编号
@@ -33,7 +33,7 @@ public class PayBillModel {
     private String orderNote;              //订单说明
     private String payeePlatformCust ;   //收款方是否是平台客户
     private Integer payeeAccountType ;    //收款方账户类型
-    private Integer payeeUserId ;         //收款方客户号
+    private String payeeUserId ;         //收款方客户号
     private String payeeUserName ;        //收款方平台户名
     private String payeeBankType ;        //收款方开户行行别
     private String payeeBankCode ;        //收款方开户行行号
@@ -271,11 +271,11 @@ public class PayBillModel {
         this.payeeAccountType = payeeAccountType;
     }
 
-    public Integer getPayeeUserId() {
+    public String getPayeeUserId() {
         return payeeUserId;
     }
 
-    public void setPayeeUserId(Integer payeeUserId) {
+    public void setPayeeUserId(String payeeUserId) {
         this.payeeUserId = payeeUserId;
     }
 
