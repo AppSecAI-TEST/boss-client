@@ -12,8 +12,10 @@ public class BalanceBillConstants {
     public static final String ACCOUNT_TYPE_NO = "0" ;
     /*财务类型，交易*/
     public static final String ACCOUNT_TYPE_TRAN = "1" ;
-    /*财务类型，手续费*/
-    public static final String ACCOUNT_TYPE_FEE = "2" ;
+    /*财务类型，渠道手续费*/
+    public static final String ACCOUNT_TYPE_CHANNEL_FEE = "2" ;
+    /*财务类型，平台手续费*/
+    public static final String ACCOUNT_TYPE_PLATEFORM_FEE = "3" ;
 
     /*核算状态，未核算*/
     public static final String BALANCE_STATE_NO = "00" ;

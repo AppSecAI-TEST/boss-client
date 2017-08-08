@@ -62,6 +62,7 @@ public class PayBillModel extends BaseModel{
     private Date settleDate ;              //结算日期
     private String checkDate ;               //渠道结算日起
     private Double tranAmount ;            //交易金额
+    private String bankResultSn;            // 银行返回支付流水
 
     public String getSn() {
         return sn;
@@ -501,5 +502,13 @@ public class PayBillModel extends BaseModel{
 
     public void setCheckDate(String checkDate) {
         this.checkDate = checkDate;
+    }
+
+    public String getBankResultSn() {
+        return bankResultSn;
+    }
+
+    public void setBankResultSn(String bankResultSn) {
+        this.bankResultSn = bankResultSn;
     }
 }
