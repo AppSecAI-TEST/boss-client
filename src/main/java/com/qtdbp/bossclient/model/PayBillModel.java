@@ -60,7 +60,7 @@ public class PayBillModel extends BaseModel{
     private String undoState ;             //撤销状态
     private String checkState ;            //对账状态
     private Date settleDate ;              //结算日期
-    private Date checkDate ;               //渠道结算日起
+    private String checkDate ;               //渠道结算日起
     private Double tranAmount ;            //交易金额
 
     public String getSn() {
@@ -487,19 +487,19 @@ public class PayBillModel extends BaseModel{
         this.settleDate = settleDate;
     }
 
-    public Date getCheckDate() {
-        return checkDate;
-    }
-
-    public void setCheckDate(Date checkDate) {
-        this.checkDate = checkDate;
-    }
-
     public Double getTranAmount() {
         return tranAmount;
     }
 
     public void setTranAmount(Double tranAmount) {
         this.tranAmount = tranAmount;
+    }
+
+    public String getCheckDate() {
+        return checkDate;
+    }
+
+    public void setCheckDate(String checkDate) {
+        this.checkDate = checkDate;
     }
 }
