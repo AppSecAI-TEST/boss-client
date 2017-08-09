@@ -1,5 +1,6 @@
 package com.qtdbp.bossclient.model;
 
+import javax.persistence.Transient;
 import java.util.Date;
 
 /**
@@ -28,6 +29,8 @@ public class SubAccountBalanceModel extends BaseModel {
     private String operator ;           // 操作人
     private Date operateTime;           // 操作时间
     private String operateStatus;       // 操作状态
+    @Transient
+    private String username;            //用户名
 
     public String getSn() {
         return sn;
@@ -163,5 +166,13 @@ public class SubAccountBalanceModel extends BaseModel {
 
     public void setOperateStatus(String operateStatus) {
         this.operateStatus = operateStatus;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 }
