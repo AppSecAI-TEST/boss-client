@@ -23,4 +23,13 @@ public interface AdjustBillClient {
      */
     @RequestMapping(value = "/settlement", method = RequestMethod.GET)
     Message customServiceSettlement(@RequestParam Map<String, Object> map);
+
+    /**
+     * 个人账户核算成功后 转账操作
+     *
+     * @param map
+     * @return
+     */
+    @RequestMapping(value = "/balance/adjust", method = RequestMethod.GET)
+    Message auditBalanceAdjust(@RequestParam Map<String, Object> map);
 }
