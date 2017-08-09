@@ -46,9 +46,18 @@ public interface ChannelCheckClient {
      * @param checkDate
      * @return
      */
-    @RequestMapping(value = "/api/download/bill/async", method = RequestMethod.POST)
+    @RequestMapping(value = "/api/download/bill/async/date", method = RequestMethod.POST)
     void downloadChannelCheckAsync(@RequestParam("id") String channelId,
                                       @RequestParam("date") String checkDate) ;
+
+    /**
+     * 异步下载渠道对账单
+     * 目前支持支付宝
+     * @param channelId
+     * @return
+     */
+    @RequestMapping(value = "/api/download/bill/async", method = RequestMethod.POST)
+    void downloadChannelCheckAsync(@RequestParam("id") String channelId) ;
 
     /**
      * 异步批量下载渠道对账单
