@@ -28,7 +28,7 @@ public interface BalanceBillClient {
                              @RequestParam("state") String balanceState) ;
 
     /**
-     * 异步核算指定日期的服务商对账单接口
+     * 异步核算指定日期的服务商对账单接口(定时任务调用)
      * @param ssoUserIds 服务商ID列表
      * #@param checkDate 结算日期（T+1），格式：2017-05-25
      * @param balanceState 结算对账状态，默认null所有，00未对账，10一次结算，11二次结算
@@ -36,4 +36,14 @@ public interface BalanceBillClient {
      */
     @RequestMapping(value = "/api/balanceBill/audit/async", method = RequestMethod.POST)
     void auditBalanceBillAsync(@RequestParam("ssoIds") List<String> ssoUserIds, @RequestParam("state") String balanceState);
+
+    /**
+     * 异步核算指定日期的服务商对账单接口
+     * @param ssoUserIds 服务商ID列表
+     * @param checkDate 结算日期（T+1），格式：2017-05-25
+     * @param balanceState 结算对账状态，默认null所有，00未对账，10一次结算，11二次结算
+     * @return
+     */
+    @RequestMapping(value = "/api/balanceBill/audit/date/async", method = RequestMethod.POST)
+    void auditBalanceBillAsync(@RequestParam("ssoIds") List<String> ssoUserIds, @RequestParam("checkDate") String checkDate, @RequestParam("state") String balanceState);
 }
