@@ -40,7 +40,7 @@ public interface PayBillClient {
      * @param map
      * @return
      */
-    @RequestMapping(value = "/noSettle/payBill", method = RequestMethod.GET)
+    @RequestMapping(value = "/payBill/noSettle", method = RequestMethod.GET)
     Message findNoSettlePayBillByCondition(@RequestParam Map<String, Object> map);
 
 }
