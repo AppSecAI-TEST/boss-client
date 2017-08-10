@@ -8,6 +8,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Map;
 
 /**
  * Created by dell on 2017/7/5.
@@ -30,5 +33,14 @@ public interface PayBillClient {
      */
     @RequestMapping(value = "/payBill/update", method = RequestMethod.POST)
     Message updatePayBill(@RequestBody PayBillModel payBillModel) ;
+
+    /**
+     * 分页查询未结算的交易流水
+     *
+     * @param map
+     * @return
+     */
+    @RequestMapping(value = "/noSettle/payBill", method = RequestMethod.GET)
+    Message findNoSettlePayBillByCondition(@RequestParam Map<String, Object> map);
 
 }

@@ -87,4 +87,13 @@ public interface ChannelCheckClient {
      */
     @RequestMapping(value = "/api/checkbill/detail", method = RequestMethod.GET)
     Message findAllChannelCheckBillByCondtion(@RequestParam Map<String, Object> map) ;
+
+    /**
+     * 分页查询渠道对账不平明细
+     *
+     * @param map
+     * @return
+     */
+    @RequestMapping(value = "/api/checkbill/detail/question", method = RequestMethod.GET)
+    Message findChannelDetailByCondition(@RequestParam Map<String, Object> map);
 }

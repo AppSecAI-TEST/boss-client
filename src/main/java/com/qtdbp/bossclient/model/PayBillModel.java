@@ -63,6 +63,7 @@ public class PayBillModel extends BaseModel{
     private String checkDate ;               //渠道结算日起
     private Double tranAmount ;            //交易金额
     private String bankResultSn;            // 银行返回支付流水
+    private String payeeNick;               //收款方服务商名字
 
     public String getSn() {
         return sn;
@@ -510,5 +511,13 @@ public class PayBillModel extends BaseModel{
 
     public void setBankResultSn(String bankResultSn) {
         this.bankResultSn = bankResultSn;
+    }
+
+    public String getPayeeNick() {
+        return payeeNick;
+    }
+
+    public void setPayeeNick(String payeeNick) {
+        this.payeeNick = payeeNick;
     }
 }
