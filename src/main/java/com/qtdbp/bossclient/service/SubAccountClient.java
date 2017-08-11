@@ -54,4 +54,13 @@ public interface SubAccountClient {
     @RequestMapping(value = "/subAccount/balance/bill", method = RequestMethod.GET)
     Message findBalanceBillByCondition(@RequestParam Map<String, Object> map);
 
+
+    /**
+     * 根据服务商ID分页查询结算完成并且对账成功的信息
+     * @param map
+     * @return
+     */
+    @RequestMapping(value = "/subAccount/balance/settle", method = RequestMethod.GET)
+    Message findSubAccountBalanceByIdAndSuccess(@RequestParam Map<String, Object> map);
+
 }
