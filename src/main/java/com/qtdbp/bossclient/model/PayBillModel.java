@@ -65,6 +65,8 @@ public class PayBillModel extends BaseModel{
     private String bankResultSn;            // 银行返回支付流水
     private String payeeNick;               //收款方服务商名字
 
+    private String bankTimeStr ;    // 查询条件，支付成功返回时间
+
     public String getSn() {
         return sn;
     }
@@ -519,5 +521,13 @@ public class PayBillModel extends BaseModel{
 
     public void setPayeeNick(String payeeNick) {
         this.payeeNick = payeeNick;
+    }
+
+    public String getBankTimeStr() {
+        return bankTimeStr;
+    }
+
+    public void setBankTimeStr(String bankTimeStr) {
+        this.bankTimeStr = bankTimeStr;
     }
 }
